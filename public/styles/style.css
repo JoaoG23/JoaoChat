@@ -1,0 +1,204 @@
+/* ----- Config Gerais ----- */
+
+:root{
+    --tamanhoPadrao: 80%;
+    --cor-inputs:#ecf0ff;
+    --cor-padrao:#ff0000;
+    --cor-fundo-mensagens:#fffdfd;
+    --cor-confirma-btn:rgb(108, 172, 35);
+    
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul{
+    padding: 0px;
+}
+header{
+    background-color:var(--cor-padrao);
+    color: var(--cor-fundo-mensagens); 
+    display: flex;
+    justify-content:center; 
+    padding: 0px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+}
+li{
+    font-size: 12px;
+    margin-bottom: 4px;
+    border:none;
+    max-width:40%;
+    min-width: 30%;
+    /* width: intrinsic;           
+    width: -moz-max-content;    
+    width: -webkit-max-content; */
+    border-radius: 10px;
+    padding: 6px;
+    background-color: var(--cor-inputs);
+    list-style-type: none;
+}
+
+/* ------ Parte Usuario Login -------- ----*/
+
+.mensagensDoUsuario-local{
+    
+    color: var(--cor-padrao);
+}
+.sessao-usuario{
+    margin: 15px;
+}
+
+.nomeUsuario{
+    border-radius: 17px;
+    padding: 10px;
+    background-color: var(--cor-padrao);
+    font-weight: bolder;
+    color:var(--cor-fundo-mensagens);
+    
+    animation: entradaUsuario 1.2s ease-in-out 1 alternate both;
+}
+
+#user_form{
+    margin: 0px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: var(--cor-fundo-mensagens);
+    box-shadow: 4px 4px 20px rgb(210, 226, 230);
+    transition: 1s;
+}
+
+
+/* ---------- Parte Caixa de Mensagens -----------*/
+.tituloSala{
+    color: var(--cor-padrao);
+    font-weight: bolder;
+}
+
+.sessao-mensagens{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--cor-fundo-mensagens);
+    box-shadow: 4px 4px 20px rgb(210, 226, 230);
+    
+    
+}
+
+#messages{
+    overflow-y: scroll;
+    overflow-x: none;
+    height:370px;
+    margin: 0px;
+}
+.textInputdiv{
+    width: 100%;
+}
+
+/* ------ Parte Botaes e Inputs de dados -------- ----*/
+input{
+
+    border:none;
+    border-radius: 9px;
+    padding: 10px;
+    width: 87%;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: var(--cor-inputs);
+    
+}
+input:focus{
+    transition: 1s;
+    box-shadow: 3px 3px 10px rgb(206, 206, 206);
+}
+
+.btn-enviar{
+    border: none;
+    background-color: var(--cor-padrao);
+    border-radius: 50%;
+    padding: 16px;
+    display: inline-block;
+    position: absolute;
+    color: wheat;
+}
+.btn-logar{
+    border: none;
+    background-color: var(--cor-padrao);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 7px;
+    box-shadow: 2px 2px 2px rgb(218, 218, 218);
+    color: wheat;
+    font-weight: 900;
+
+}
+.btn-enviar:hover{
+    margin: 3px;
+    transition: 0.7s;
+    background-color: var(--cor-confirma-btn);
+    color: rgb(253, 246, 246);
+    border-left:3px solid rgb(170, 241, 122);
+}
+
+.btn-logar:hover{
+    margin: 10px;
+    transition: 0.7s;
+    background-color: var(--cor-confirma-btn);
+    color: rgb(253, 246, 246);
+}
+
+/* -------- Efeitos e ferramenta de Uso -----------*/
+@keyframes entradaUsuario {
+    0%{opacity: 0;}
+    50%{opacity: 0.3;}
+    100%{opacity: 1;}
+}
+
+
+.debug{
+    border: 3px solid green;
+}
+
+/* ------------- */
+@media screen and (max-width:800px) {
+    
+    main{
+        display: block;
+        grid-template-columns: 1fr 2fr;
+        margin: 0px;
+    }
+    input{
+
+        
+        padding: 10px;
+        width: 85%;
+        margin-right: 5px;
+        margin-top: 10px;
+        
+        
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    main{
+        display: block;
+        grid-template-columns: 1fr 2fr;
+        margin: 0px;
+    }
+    input{
+
+        
+        padding: 10px;
+        width: 75%;
+        margin-right: 5px;
+        margin-top: 10px;
+        
+        
+    }
+}

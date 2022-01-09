@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/logoCopaChat.png" type="image/png"/>
+    <title>Chat</title>
+</head>
+<body>
+    <header >
+        <h1>CopaChat</h1>
+    </header>
+    <main>
+        <section class="sessao-usuario">
+
+            <form  name="user_form_name" id="user_form" >
+                
+                    <h1>Usuario </h1>
+                    <input placeholder="Digite seu nome entra no Chat!" name="user" id="user" type="text" autocomplete="off">
+                
+                <button class="btn-logar"  type="submit">Logar ↪</button>
+            </form>
+            <div id="idenficacaoUsuario"> 
+    
+            </div>
+
+        </section>
+
+        <section class=" sessao-mensagens">
+            <h1 class="tituloSala">Sala de reuniões</h1>
+            <div id="messages">
+        
+            </div>
+            <form  name="message_form_name" id="message_form">
+                <div class="inputText">
+                    
+                    <input name="msg" id="message" type="text" placeholder="Digite sua mensagem ao grupo!" autocomplete="off">
+                    <button class="btn-enviar"  type="submit">▶</button>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+    <!-- ---- Como voce importou ele antes terá acesso dentro do Chat -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+</body>  
+</html>
