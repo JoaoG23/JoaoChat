@@ -1,5 +1,5 @@
 const room = window.location.pathname.replace(/\//g,''); // g todas as ocorrencias 
-const socket = io(`http://192.168.0.107:3000/${room}`);
+const socket = io(`http://192.168.0.106:3000/${room}`);
 
 let user = '';
 // Quando acontecer isso | vou exercultar um funcao que irá receber os meus dados
@@ -11,12 +11,6 @@ socket.on('update_messages', (messages) => {
 function updateMessagesOnScreen(messages) {
     const div_messages = document.querySelector('#messages'); 
 
-    // let list_messages = '<ul>'
-    // messages.forEach(message => {
-    //     list_messages += `<li><b>${ message.user }</b>: ${ message.msg }</li>`
-    // });
-
-    // list_messages += '</ul>'
 
     let list_messages = '<ul>'
     messages.forEach(message => {

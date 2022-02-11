@@ -18,7 +18,7 @@ app.use('/sala2', express.static( path.join(__dirname, 'public' )));
 
 const server = app.listen(process.env.PORT, () => {
 
-    console.log("SERVIDOR LIGADO NA PORTA ",3000 );
+    console.log("SERVIDOR LIGADO NA PORTA ",process.env.PORT );
     console.log("COPACHAT - O Melhor site corpotativo da região !");
 });
 
