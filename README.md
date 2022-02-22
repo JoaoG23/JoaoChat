@@ -1,4 +1,4 @@
-# CopaChat 💬
+# JoaoChat 💬
 
 <img align="center" width="200px" src="./assets/logoCopaChat.png"/>
 
