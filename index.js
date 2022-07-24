@@ -7,10 +7,10 @@ const cors = require('cors');
 
 app.use(cors());
 const socketIo = require('socket.io'); // ---- 2 - Inporte os modulos -----
-// 3 --- Crie conexão socketIo'
+// 3 --- Crie conexão SOCKETIO -----
 
 // ---- 4 - Crie a pasta public e arquivo "index.html" cacete lembre-se disso é "index.html"!!! -----
-
+app.get('/' ,(req, res) =>  { res.redirect('./sala1'); });
 app.use('/sala1', express.static( path.join(__dirname, 'public' )));
 app.use('/sala2', express.static( path.join(__dirname, 'public' )));
 
@@ -56,18 +56,3 @@ const sala2 = io.of('/sala2').on('connection' , (socket) => {
     });
 
 });
-
-
-// ==== Para somente um grupo =======
-// io.on('connection',function(socket) {
-
-//     console.log('New connection');
-//     socket.emit('update_messages', messages);
-
-//     socket.on('new_message', function(data){
-
-//         messages.push(data);
-//         console.log(messages);
-//         io.emit('update_messages', messages);
-//     });
-// });

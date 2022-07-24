@@ -1,5 +1,6 @@
 const room = window.location.pathname.replace(/\//g,''); // g todas as ocorrencias 
-const socket = io(`http://192.168.0.106:3000/${room}`);
+const socket = io(`http://192.168.100.7:3000/${room}`);
+
 
 let user = '';
 // Quando acontecer isso | vou exercultar um funcao que irá receber os meus dados
